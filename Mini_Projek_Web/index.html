@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Sela Putri Ismalia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <div class="header">
+            <h1 class="name">Sela Putri Ismalia</h1>
+            <h2 class="info">Student of Mulawarman University</h2>
+            <div class="social-media">
+                <a href="#"><img src="ig.png" alt="Instagram"></a>
+                <a href="#"><img src="git.png" alt="Git Hub"></a>
+                <a href="#"><img src="trak.png" alt="Trakteer"></a>
+                <a href="#"><img src="in.png" alt="Linked in"></a>
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#cv">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-me">
+            <img src="trak.png">
+            <div class="about-text">
+                <h2>About <span>me</span></h2>
+                <h5>Mahasiswa Universitas Mulawarman</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cum natus deserunt at tempora molestias aspernatur iusto sapiente similique sunt? Veniam perferendis magni velit excepturi amet est? Iste, enim perferendis!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="skills" id="skills">
+        <div class="skills-content">
+            <h2>Skills</h2>
+            <div class="skill-item">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, React, Node.js</p>
+            </div>
+            <div class="skill-item">
+                <h3>Graphic Design</h3>
+                <p>Adobe Photoshop, Adobe Illustrator, CorelDRAW</p>
+            </div>
+            <div class="skill-item">
+                <h3>Data Analysis</h3>
+                <p>Python, R, SQL, Excel</p>
+            </div>
+        </div>
+    </section> -->
+    <section class="skills" id="skills">
+        <div class="skills-content">
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5 class="skil-kotak">Skils</h5>
+                <div class="skil-bar">
+                    <p>html</p>
+                    <div class="skill-box">
+                        <div class="html">45%</div>
+                    </div>
+                    <p>html</p>
+                    <div class="skill-box">
+                        <div class="html">45%</div>
+                    </div>
+                    <p>html</p>
+                    <div class="skill-box">
+                        <div class="html">45%</div>
+                    </div>
+
+                
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    <section class="certificates" id="certificates">
+    <div class="certificates-content">
+        <h2>Certificates</h2>
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="ab.png" alt="Teks untuk gambar 1">
+                <div class="image-text">Teks untuk gambar 1</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="ab.png" alt="Teks untuk gambar 2">
+                <div class="image-text">Teks untuk gambar 2</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="ab.png" alt="Teks untuk gambar 3">
+                <div class="image-text">Teks untuk gambar 3</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="ab.png" alt="Teks untuk gambar 4">
+                <div class="image-text">Teks untuk gambar 4</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="ab.png" alt="Teks untuk gambar 5">
+                <div class="image-text">Teks untuk gambar 5</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="ab.png" alt="Teks untuk gambar 5">
+                <div class="image-text">Teks untuk gambar 5</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const imageWrappers = document.querySelectorAll('.image-wrapper');
+
+    imageWrappers.forEach(function (wrapper) {
+        const image = wrapper.querySelector('img');
+        const imageText = wrapper.querySelector('.image-text');
+
+        // Menambahkan event listener ke gambar
+        image.addEventListener('click', function () {
+            toggleFullScreen(image);
+        });
+
+        // Menambahkan event listener ke teks
+        imageText.addEventListener('click', function () {
+            toggleFullScreen(image);
+        });
+    });
+
+    function toggleFullScreen(element) {
+        element.classList.toggle('fullscreen');
+
+        if (element.classList.contains('fullscreen')) {
+            // Tambahkan tombol keluar full screen
+            const exitFullscreenButton = document.createElement('div');
+            exitFullscreenButton.innerHTML = '&#x2716;'; // Unicode untuk simbol "X"
+            exitFullscreenButton.className = 'exit-fullscreen-button';
+            document.body.appendChild(exitFullscreenButton);
+
+            // Tambahkan event listener untuk tombol keluar full screen
+            exitFullscreenButton.addEventListener('click', function () {
+                element.classList.remove('fullscreen');
+                exitFullscreenButton.remove(); // Hapus tombol keluar full screen
+            });
+        } else {
+            // Hapus tombol keluar full screen jika tidak lagi fullscreen
+            const exitFullscreenButton = document.querySelector('.exit-fullscreen-button');
+            if (exitFullscreenButton) {
+                exitFullscreenButton.remove();
+            }
+        }
+    }
+});
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const imageWrappers = document.querySelectorAll('.image-wrapper');
+
+    imageWrappers.forEach(function (wrapper) {
+        const image = wrapper.querySelector('img');
+
+        image.addEventListener('click', function () {
+            if (!image.classList.contains('fullscreen')) {
+                image.classList.add('fullscreen');
+                // Tambahkan tombol keluar full screen
+                const exitFullscreenButton = document.createElement('div');
+                exitFullscreenButton.innerHTML = '&#x2716;'; // Unicode untuk simbol "X"
+                exitFullscreenButton.className = 'exit-fullscreen-button';
+                document.body.appendChild(exitFullscreenButton);
+                // Tambahkan event listener untuk tombol keluar full screen
+                exitFullscreenButton.addEventListener('click', function () {
+                    image.classList.remove('fullscreen');
+                    exitFullscreenButton.remove(); // Hapus tombol keluar full screen
+                });
+            }
+        });
+    });
+});
+
+    </script>
+</section>
+    
+    
+    
+    <section class="cv" id="cv-section">
+        <div class="cv-content">
+            <h2>CV</h2>
+            <img src="ab.png" alt="CV Image">
+            <div class="pdf-controls">
+                <a href="cv.pdf" download class="download-button">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var menu = document.getElementById('menu');
+            var footer = document.querySelector('footer'); // Ambil elemen footer
+    
+    // Jarak antara bagian bawah layar dan bagian atas footer
+            var distanceToFooter = footer.offsetTop - window.innerHeight;
+
+    // Jika scroll mencapai akhir konten
+            if (scrollPosition >= distanceToFooter) {
+                menu.classList.remove('active');
+            } else {
+                menu.classList.add('active');
+            }
+        });
+
+
+    </script>
+</body>
+</html>
