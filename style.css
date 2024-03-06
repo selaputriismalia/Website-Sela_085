@@ -1,0 +1,350 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #011f19, #343534); /* Gradasi hijau tua untuk latar belakang */
+    color: #fff; /* Warna teks putih */
+    margin: 0; /* Hapus margin default */
+    padding: 0; /* Hapus padding default */
+    font-family: Arial, sans-serif; /* Font teks */
+}
+
+/* Main Styles */
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Memberi padding untuk semua sisi */
+    text-align: center; /* Untuk mengatur teks menjadi rata tengah */
+}
+
+.name {
+    font-size: 3rem; /* Ukuran font nama */
+}
+
+.info {
+    font-size: 1.5rem; /* Ukuran font informasi */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media img {
+    width: 40px; /* Ukuran ikon media sosial */
+    height: 40px;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    z-index: 1000; /* Pastikan menu ada di atas konten */
+    transition: top 0.3s ease; /* Transisi ketika menu bergerak */
+}
+
+.menu nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px; /* Ruang di dalam menu */
+}
+
+
+.menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px; /* Menambahkan padding di dalam link */
+    border: 2px solid #044239; /* Menambahkan border */
+    border-radius: 5px; /* Memberikan sudut bulat pada kotak */
+    transition: all 0.3s ease;
+    background-color: rgb(14, 63, 223); /* Warna latar belakang kotak (merah) */
+}
+
+.menu nav ul li a:hover {
+    background-color: #f00; /* Warna latar belakang saat hover (merah) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan ketika hover */
+}
+
+
+
+.menu.active {
+    top: -60px; /* Sembunyikan menu saat digulir ke bawah */
+}
+
+/* Additional Styles */
+.about {
+    background: linear-gradient(to bottom, #343534, #011f19); /* Gradasi hijau tua untuk latar belakang */
+    padding: 50px 20px; /* Ruang di dalam bagian About */
+    text-align: center;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    margin-left: 20px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-text h2 span {
+    color: #007bff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2rem;
+    }
+    
+    .info {
+        font-size: 1.2rem;
+    }
+    
+    .social-media img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.skills {
+    background: linear-gradient(to bottom, #011f19, #343534); /* Gradasi hijau tua untuk latar belakang */
+    padding: 50px 20px; /* Ruang di dalam bagian keterampilan */
+    text-align: center;
+}
+
+.skills-content {
+    max-width: 800px; /* Lebar maksimum konten keterampilan */
+    margin: 0 center; /* Posisi konten di tengah halaman */
+}
+
+.skil-kotak{
+    color: white;
+    font-size: 25px;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.skill-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.skil-bar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.skil-bar p {
+    text-align: left;
+}
+
+.skill-box {
+    text-align: right; /* Posisi konten ke tengah-tengah */
+    width: 100%; /* Agar konten penuh lebar */
+    background-color: white;
+    padding: 5px; /* Tambahkan padding agar konten lebih besar */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(24, 23, 23, 0.1);
+}
+
+.html {
+    width: 30%; /* Agar konten HTML penuh lebar */
+    background-color: red;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .skill-item {
+        width: 100%; /* Konten menjadi penuh lebar pada layar kecil */
+    }
+}
+
+
+.card{
+    height: auto;
+    width: 650px;
+    padding: 20px 35px;
+    background: #032716;
+    border-radius: 20px;
+    margin: 15px;
+    padding: relative;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid rgb(243, 243, 243);
+}
+
+
+
+
+
+.cv {
+    padding: 50px 20px; /* Ruang di dalam bagian CV */
+    text-align: center;
+}
+
+.cv-content {
+    max-width: 800px; /* Lebar maksimum konten CV */
+    margin: 0 auto; /* Posisi konten di tengah halaman */
+}
+
+.cv h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff; /* Warna teks */
+}
+
+.cv img {
+    max-width: 100%; /* Gambar CV responsif */
+    height: auto;
+    margin-bottom: 20px; /* Ruang di bawah gambar */
+}
+
+.pdf-controls {
+    margin-top: 20px; /* Menambahkan ruang antara gambar dan tombol */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3; /* Warna latar belakang tombol saat hover */
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px; /* Menambahkan jarak dari tepi */
+    box-sizing: border-box; /* Menyertakan padding dalam perhitungan lebar */
+}
+
+.image-wrapper {
+    position: relative;
+    margin: 10px; /* Menambahkan jarak di sekitar gambar */
+    width: calc(33.33% - 20px); /* Mengatur lebar gambar dengan sedikit jarak */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease; /* Efek transisi filter */
+}
+
+.image-wrapper:hover img {
+    filter: blur(3px); /* Efek blur saat dihover */
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Efek transisi opacity */
+}
+
+.image-wrapper:hover .image-text {
+    opacity: 1; /* Munculkan teks saat dihover */
+}
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    object-fit: contain; /* Biarkan gambar mempertahankan rasio aspek */
+    background-color: rgba(0, 0, 0, 0.9); /* Warna latar belakang untuk overlay */
+    cursor: pointer;
+}
+
+.exit-fullscreen-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    cursor: pointer;
+    color: rgb(12, 12, 12);
+    font-size: 24px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease; /* Efek transisi filter */
+}
+
+.image-wrapper:hover img {
+    filter: none; /* Menghilangkan efek blur saat dihover */
+}
+
+.image-wrapper.fullscreen img {
+    transform: scale(0.9);
+    filter: none; /* Menghilangkan efek blur saat fullscreen */
+}
